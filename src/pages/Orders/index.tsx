@@ -1,11 +1,11 @@
 import * as React from 'react';
 import AppLayout from 'layout/AppLayout';
 
-export default function Home () {
+export default function Orders () {
   return (
     <AppLayout>
       <div>
-        This is Home Page
+        This is Orders Page
       </div>
     </AppLayout>
   );

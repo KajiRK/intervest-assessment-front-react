@@ -7,6 +7,11 @@ import UserIcon from "components/Icons/User";
 import LockIcon from "components/Icons/Lock";
 import PrimaryButton from "components/Buttons/Primary";
 
+export interface LoginFormValues {
+  username: string;
+  password: string;
+}
+
 export default function LoginForm() {
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
@@ -33,7 +38,7 @@ export default function LoginForm() {
     },
   });
 
-  const onSubmit = async (data: any) => {
+  const onSubmit = async (data: LoginFormValues) => {
     console.log(data, "loginData");
     // we can the authendication process here
     // and once the credentials are compaored if success - will navigate to home page

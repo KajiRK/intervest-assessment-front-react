@@ -1,11 +1,11 @@
 import * as React from 'react';
 import AppLayout from 'layout/AppLayout';
 
-export default function Home () {
+export default function Settings () {
   return (
     <AppLayout>
       <div>
-        This is Home Page
+        This is Settings Page
       </div>
     </AppLayout>
   );

@@ -2,7 +2,7 @@ export default function UserIcon() {
   return (
     <svg
       fill="none"
-      className="bi bi-person w-5 h-5 text-gray-500 dark:text-gray-400"
+      className="bi bi-person w-5 h-5 text-gray-500"
       stroke="currentColor"
       stroke-width="1.5"
       viewBox="0 0 24 24"
