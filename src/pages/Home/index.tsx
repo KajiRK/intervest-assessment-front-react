@@ -7,8 +7,21 @@ import StatsCardTwo from "components/Widgets/StatsCardTwo";
 import StatsCardThree from "components/Widgets/StatsCardThree";
 import ComparisonChartCard from "components/Widgets/ComparisonChartCard";
 import PieChartCard from "components/Widgets/PieChartCard";
+import { useAppDispatch } from "hooks/useAppDispatch";
+import { useAppSelector } from "hooks/useAppSelector";
+import { fetchStockResults, getStockResults } from "data/store/stockSlice";
 
 export default function Home() {
+
+  const dispatch = useAppDispatch();
+  const results = useAppSelector(getStockResults);
+
+  React.useEffect(() => {
+    dispatch(fetchStockResults());
+  }, [dispatch]);
+
+  console.log(results, 'results');
+
   return (
     <AppLayout>
       <div className="grid grid-cols-1 gap-0 lg:gap-5 lg:grid-cols-3">
@@ -17,10 +30,10 @@ export default function Home() {
         </div>
         <div>
           {/* last month AAPL Ticker close price bar chart */}
-          <BarChatCard /> 
+          <BarChatCard />
         </div>
       </div>
-      
+
       <div className="grid grid-cols-1 gap-5 lg:grid-cols-3 mt-6">
         <StatsCardOne /> {/* total last month high prices for AAPL Ticker*/}
         <StatsCardTwo /> {/* total last month low prices for AAPL Ticker*/}
