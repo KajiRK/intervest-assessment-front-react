@@ -66,8 +66,8 @@ export default function BarChatCard() {
     <div className="rounded-md shadow-sm bg-white py-6 px-7.5 mt-6 lg:mt-0 lg:p-4">
       <div className="flex items-center justify-between pl-4 pt-2">
         <div className="flex-shrink-0">
-          <span className="text-lg font-boldtext-gray-900">Current week AAPL Ticker's Close Price</span>
-          <h3 className="text-sm font-light text-gray-500 dark:text-gray-400">{`${startOfWeek('MMMM Do')} - ${currentDate('MMMM Do')}`}</h3>
+          <span className="text-lg font-semibold text-gray-900">Current week AAPL Ticker's Close Price</span>
+          <h3 className="text-sm font-light text-gray-500">{`${startOfWeek('MMMM Do')} - ${currentDate('MMMM Do')}`}</h3>
         </div>
       </div>
       <div className="pl-4">
