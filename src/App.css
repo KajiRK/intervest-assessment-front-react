@@ -19,3 +19,7 @@
 body {
   color: '#333333';
 }
+
+.apexcharts-yaxis-title-text, .apexcharts-canvas {
+  font-weight: 400 !important;
+}

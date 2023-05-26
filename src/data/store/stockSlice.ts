@@ -3,6 +3,7 @@ import { RootState } from 'data/store';
 import axios from 'configs/axios';
 import { StockResult, StockStateValues } from 'data/entities/stock';
 import { env } from "configs/env";
+import { currentDate, startOfWeek } from 'configs/dateFormats';
 
 const initialState: StockStateValues = {
     stockResults: []
@@ -11,7 +12,7 @@ const initialState: StockStateValues = {
 export const fetchStockResults = createAsyncThunk (
     "fetch/stockResults", 
     async () => {
-        const response = await axios.get(`/AAPL/range/1/day/2023-01-09/2023-01-09?adjusted=true&sort=asc&limit=12&apiKey=${env.apiKey}`);
+        const response = await axios.get(`/AAPL/range/1/day/${startOfWeek()}/${currentDate()}?adjusted=true&sort=asc&apiKey=${env.apiKey}`);
         const stockResults: StockResult[] = response.data.results;
         return stockResults;
     }
