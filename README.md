@@ -1,6 +1,28 @@
-# Getting Started with Create React App
+# Intervest Assessment Frontend - React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The front application developed using ReactJs with TypeScript template. This repo contains the development of login and dashboard screens with stocks data integrated.
+
+### Pre-installed and used packages
+- React hook form - To manage form of login
+- TailwindCSS - For UI components development
+- Redux toolkit - Redux state management to store stocks related data 
+- ApexCharts - For charts development
+- Axios - To manage promise based HTTP client request
+- momentjs - To convert and format dates
+- yup - For form validations
+
+### Things that I completed in this assessment
+- Login screen with basic authentication
+- Dashboard screen with stocks data widgets
+- Picked one Ticker's related data for the week and displayed in the dashboard
+- Redux store implemented to store stocks data for selected ticker
+- Sidebar navigation implemented with react router
+- Implemented few unit test cases
+
+### Require .env values
+Duplicate .env.example inside root dir and change the file name into .env and set below mentioned variables.
+- REACT_APP_API_KEY - Place your own API KEY
+- REACT_APP_TICKER - Name of the ticker
 
 ## Available Scripts
 
