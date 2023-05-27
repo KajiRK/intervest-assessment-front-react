@@ -23,7 +23,7 @@ The front application developed using ReactJs with TypeScript template. This rep
 ![Login Screen](https://github.com/KajiRK/intervest-assessment-front-react/blob/master/src/assets/images/screens/LoginPage.png)
 
 #### Dashboard Screen
-
+![Dashboard Screen](https://github.com/KajiRK/intervest-assessment-front-react/blob/master/src/assets/images/screens/HomePage.png)
 
 ### Require .env values
 Duplicate .env.example inside root dir and change the file name into .env and set below mentioned variables.
