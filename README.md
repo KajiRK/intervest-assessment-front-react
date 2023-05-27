@@ -20,7 +20,7 @@ The front application developed using ReactJs with TypeScript template. This rep
 - Implemented few unit test cases
 
 #### Login Screen
-![Login Screen](assets/images/screens/LoginPage.png)
+![Login Screen](https://github.com/KajiRK/intervest-assessment-front-react/blob/master/src/assets/images/screens/LoginPage.png)
 
 #### Dashboard Screen
 
