@@ -65,6 +65,7 @@ export default function LoginForm() {
               placeholder="Username"
               type="text"
               className="w-full p-2 pl-10 text-md border border-gray-300 rounded placeholder:font-light placeholder:text-gray-500"
+              data-testid="username-input"
             />
           </div>
           {errors.username && (
@@ -88,6 +89,7 @@ export default function LoginForm() {
               placeholder="Password"
               type="password"
               className="w-full p-2 pl-10 text-md border border-gray-300 rounded placeholder:font-light placeholder:text-gray-500"
+              data-testid="password-input"
             />
           </div>
           {errors.password && (
@@ -108,7 +110,7 @@ export default function LoginForm() {
             Forgot password
           </a>
         </div>
-        <PrimaryButton type="submit" text="Login In" />
+        <PrimaryButton type="submit" text="Log in" />
         <div>
           Or{" "}
           <a href="/" className="text-md text-primary-purple">

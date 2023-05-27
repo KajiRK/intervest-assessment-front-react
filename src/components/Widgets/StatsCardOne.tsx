@@ -76,7 +76,7 @@ export default function StatsCardOne({
         <div className="flex items-center text-base font-normal text-gray-500 mt-4">
           <span className="flex items-center mr-2 text-sm text-green-900">
             <UpArrowIcon />
-            1.10%
+            0.00%
           </span>
           Since yesterday
         </div>
