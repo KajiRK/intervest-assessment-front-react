@@ -1,5 +1,10 @@
 import moment from 'moment';
 
+export const lastDate = (format?: string) => {
+    return moment().subtract(1, "days")
+    .format(format ? format : 'YYYY-MM-DD');
+};
+
 export const currentDate = (format?: string) => {
     return moment()
     .format(format ? format : 'YYYY-MM-DD');

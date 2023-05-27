@@ -1,30 +1,23 @@
-import React from "react";
 import UpArrowIcon from "components/Icons/UpArrow";
 import { ApexOptions } from "apexcharts";
 import ReactApexChart from "react-apexcharts";
-import { getStockResults } from "data/store/stockSlice";
-import { useAppSelector } from "hooks/useAppSelector";
-import { StockResult } from "data/entities/stock";
-import { convertUnix } from "configs/dateFormats";
+
+export interface IStatsCardTwoProps {
+  dateRanges: string[];
+  lowPrices: number[];
+  totalLowPrice: number;
+}
 
 type ChartSeries = {
   name: string;
   data: number[];
 }[];
 
-export default function StatsCardTwo() {
-  const results = useAppSelector(getStockResults);
-  const getDateRanges = results.map((result: StockResult) => result.t);
-  const dateRanges = getDateRanges.map((timestamp: number) => {
-    return convertUnix(timestamp, "Do");
-  });
-  const lowPrices = results.map((result: StockResult) => result.l);
-  const totalLowPrice = React.useMemo(() => {
-    return lowPrices.reduce((reducer: number, price: number) => {
-      return reducer + price;
-    }, 0);
-  }, [lowPrices]);
-
+export default function StatsCardTwo({
+  dateRanges,
+  lowPrices,
+  totalLowPrice,
+}: IStatsCardTwoProps) {
   const options: ApexOptions = {
     colors: ["#F3C522"],
     chart: {

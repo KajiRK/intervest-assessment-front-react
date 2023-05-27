@@ -12,7 +12,7 @@ const initialState: StockStateValues = {
 export const fetchStockResults = createAsyncThunk (
     "fetch/stockResults", 
     async () => {
-        const response = await axios.get(`/AAPL/range/1/day/${startOfWeek()}/${currentDate()}?adjusted=true&sort=asc&apiKey=${env.apiKey}`);
+        const response = await axios.get(`/v2/aggs/ticker/${env.ticker}/range/1/day/${startOfWeek()}/${currentDate()}?adjusted=true&sort=asc&apiKey=${env.apiKey}`);
         const stockResults: StockResult[] = response.data.results;
         return stockResults;
     }
