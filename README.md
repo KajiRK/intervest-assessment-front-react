@@ -30,9 +30,13 @@ Duplicate .env.example inside root dir and change the file name into .env and se
 - REACT_APP_API_KEY - Place your own API KEY
 - REACT_APP_TICKER - Name of the ticker
 
-## Available Scripts
+## To run the project
 
 In the project directory, you can run:
+
+### `yarn install`
+
+Then, you can run:
 
 ### `yarn start`
 
