@@ -9,7 +9,7 @@ export default function WelcomeCard () {
           <p className="text-gray-600 font-light text-sm leading-7 lg:pr-12">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
           Lorem Ipsum has been the industry's standard. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
         </div>
-        <div className="pt-4 pl-14 mb-4 mr-4 lg:pl-6 lg:pr-12 order-first lg:order-last">
+        <div className="pt-4 pl-14 mb-4 mr-12 lg:pl-6 lg:pr-12 order-first lg:order-last">
           <img src={WelcomeCardVector} alt="Logo" className="w-80" />
         </div>
       </div>

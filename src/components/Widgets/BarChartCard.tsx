@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { ApexOptions } from "apexcharts";
 import ReactApexChart from "react-apexcharts";
 import { getStockResults } from "data/store/stockSlice";
@@ -20,6 +19,11 @@ export default function BarChatCard() {
   const closePrices = results.map((result: StockResult) => result.c);
 
   const options: ApexOptions = {
+    chart: {
+      toolbar: {
+        show: false
+      }
+    },
     plotOptions: {
       bar: {
         horizontal: false,
@@ -34,15 +38,30 @@ export default function BarChatCard() {
       show: true,
       width: 1,
       colors: ["#694bdb"],
+      curve: "smooth"
     },
+    grid: {
+			show: false
+		},
+		legend: {
+			show: false
+		},
     xaxis: {
+      floating: false,
+			labels: {
+				show: false
+			},
+			axisBorder: {
+				show: false
+			},
+			axisTicks: {
+				show: false
+			},
       categories: dateRanges,
     },
     yaxis: {
-      title: {
-        text: "Close Prices in $",
-      },
-    },
+			show: false
+		},
     fill: {
       opacity: 1,
     },
@@ -65,12 +84,12 @@ export default function BarChatCard() {
   return (
     <div className="rounded-md shadow-sm bg-white py-6 px-7.5 mt-6 lg:mt-0 lg:p-4">
       <div className="flex items-center justify-between pl-4 pt-2">
-        <div className="flex-shrink-0">
-          <span className="text-lg font-semibold text-gray-900">Current week AAPL Ticker's Close Price</span>
+        <div className="flex-shrink-0 ">
+          <span className="lg:text-lg font-semibold text-gray-900 text-md">This week AAPL Ticker's Close Price</span>
           <h3 className="text-sm font-light text-gray-500">{`${startOfWeek('MMMM Do')} - ${currentDate('MMMM Do')}`}</h3>
         </div>
       </div>
-      <div className="pl-4">
+      <div>
         <ReactApexChart
           options={options}
           series={series}
