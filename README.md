@@ -19,6 +19,12 @@ The front application developed using ReactJs with TypeScript template. This rep
 - Sidebar navigation implemented with react router
 - Implemented few unit test cases
 
+#### Login Screen
+![Login Screen](assets/images/screens/LoginPage.png)
+
+#### Dashboard Screen
+
+
 ### Require .env values
 Duplicate .env.example inside root dir and change the file name into .env and set below mentioned variables.
 - REACT_APP_API_KEY - Place your own API KEY
